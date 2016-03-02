@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302031758) do
+ActiveRecord::Schema.define(version: 20160302070125) do
 
   create_table "bubbles", force: :cascade do |t|
     t.string   "text"
@@ -19,5 +19,16 @@ ActiveRecord::Schema.define(version: 20160302031758) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

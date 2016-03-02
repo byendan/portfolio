@@ -9,6 +9,36 @@
     text-align: center;
     position: relative;
     z-index: 1;
+
+
+    .buzz-bubble-section {
+      display: inline-block;
+      float: left;
+      position: absolute;
+      top: 150px;
+      left: 0px;
+      width: 100%;
+
+      .buzz-bubble {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        font-size: 20px;
+        position: relative;
+        z-index: 5;
+        left: 20%;
+        background-color: rgba(25, 6, 41, 0.4);
+        border: solid 5px rgba(132, 75, 161, 0.3);
+        color: white;
+        font-family: 'Roboto', sans-serif;
+
+        h1 {
+          font-weight: 500;
+          font-size: 30px;
+          margin-top: 50px;
+        }
+      }
+    }
 }
 
 .svg-1 {
@@ -37,6 +67,7 @@
       font-weight: 300;
       margin-top: 10px;
     }
+
 }
 
 .box-2 {

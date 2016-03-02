@@ -11,6 +11,11 @@
       <h1>Brendan Brown</h1>
       <h2>Portfolio</h2>
     </div>
+    <div class="buzz-bubble-section">
+      <% @bubbles.each do |bubble| %>
+        <%= render template: "bubbles/show", locals: {bubble: bubble} %>
+      <% end %>
+    </div>
 </div>
 <div class="box-2">
 

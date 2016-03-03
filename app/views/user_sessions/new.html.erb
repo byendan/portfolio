@@ -1,4 +1,7 @@
+<div class="login-area">
+  <div class="l-section">
 <div class="page-header"><h1>Sign In</h1></div>
+<hr class="l-hr" />
 
 <%= form_for @user_session do |f| %>
   <%= render 'shared/errors', object: @user_session %>
@@ -20,3 +23,5 @@
 
   <%= f.submit "Log in!", class: 'btn btn-primary btn-lg' %>
 <% end %>
+</div>
+</div>

@@ -1,0 +1,21 @@
+.login-area {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  .l-section {
+    display: inline-block;
+    width: 400px;
+    text-align: left;
+
+    .page-header {
+      border: none;
+      margin-bottom: 0;
+    }
+
+    .l-hr {
+      border: solid 1px #29B55C;
+      margin-top: 0;
+    }
+  }
+}

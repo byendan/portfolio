@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   get 'bubbles/new'
-
+  post 'bubbles/update'
   root 'front#show'
 
   resources :user_sessions, only: [:create, :destroy]
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
   get '/sign_in', to: 'user_sessions#new', as: :sign_in
+  get '/dashboard' => 'user_sessions#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,20 @@
+<div class="user-area">
+  <h1>User Info</h1>
+  <div class="bubbles-view-area">
+    <% @bubbles.each do |bubble| %>
+      <div class="bubble-box">
+        <%= render template: "bubbles/show", locals: {bubble: bubble} %>
+        <% if bubble != nil %>
+        <%= form_for  :bubble, url: bubbles_update_url(bubble) do |f| %>
+
+          <%= f.text_field :text, class: "form-control", :placeholder => bubble.text %>
+          <%= f.submit "Edit", class: "btn btn-primary bub-edit" %>
+        <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+
+
+</div>

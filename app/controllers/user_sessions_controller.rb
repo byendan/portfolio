@@ -1,6 +1,12 @@
 class UserSessionsController < ApplicationController
+  skip_before_action :authorize, only: [:create, :new]
+
   def new
     @user_session = UserSession.new
+  end
+
+  def show
+    @bubbles = Bubble.all
   end
 
   def create

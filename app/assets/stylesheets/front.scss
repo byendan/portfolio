@@ -141,3 +141,24 @@
     background-color: #333333;
     display: block;
 }
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  text-align: center;
+
+  .btn {
+    display: inline-block;
+    background-color: #29B55C;
+    border-color: #29B55C;
+    a {
+      color: #333333;
+      text-decoration: none;
+
+      &:hover {
+        color: #333333;
+      }
+    }
+  }
+}

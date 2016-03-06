@@ -1,0 +1,3 @@
+$(".bubbles-view-area").html('<div class="bubble-box"><%= escape_javascript(render template: "bubbles/show", locals: {bubble: @bubble}) %>
+<%= escape_javascript(render template: "bubbles/edit_form", locals: {bubble: @bubble})%></div>
+');

@@ -7,6 +7,9 @@
         <%= render template: "bubbles/edit_form", locals: {bubble: bubble} %>
       </div>
     <% end %>
+    <% if @bub_count < 100 %>
+      <%= button_to 'Add Bubble', bubbles_path, remote: true, class: "btn btn-primary bub-edit" %>
+    <% end %>
   </div>
 
 

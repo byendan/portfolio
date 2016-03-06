@@ -7,6 +7,7 @@ class UserSessionsController < ApplicationController
 
   def show
     @bubbles = Bubble.all
+    @bub_count = Bubble.count
   end
 
   def create

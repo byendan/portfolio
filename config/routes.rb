@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'bubbles/new'
-  post 'bubbles/update'
-  patch 'bubbles/update'
+  # get 'bubbles/new'
+  # post 'bubbles/update'
+  # patch 'bubbles/update'
   root 'front#show'
 
+  resources :bubbles
   resources :user_sessions, only: [:create, :destroy]
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out

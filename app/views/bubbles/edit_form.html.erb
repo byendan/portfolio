@@ -1,5 +1,5 @@
 
-  <%= form_for(bubble, remote: true, url: bubbles_update_url(bubble_id: bubble), fromat: :json) do |f| %>
+  <%= form_for(bubble, remote: true, url: bubble_url(id: bubble), fromat: :json) do |f| %>
     <%= f.text_field :text, class: "form-control", :placeholder => bubble.text %>
     <%= f.hidden_field :id  %>
     <%= f.submit "Edit", class: "btn btn-primary bub-edit" %>

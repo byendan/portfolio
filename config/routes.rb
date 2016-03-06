@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'bubbles/new'
   post 'bubbles/update'
+  patch 'bubbles/update'
   root 'front#show'
 
   resources :user_sessions, only: [:create, :destroy]

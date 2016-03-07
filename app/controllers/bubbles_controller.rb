@@ -11,6 +11,7 @@ class BubblesController < ApplicationController
     respond_to do |format|
       if @bubble.save
         @bubble.update_attributes(bub_num: @bubble.id)
+        @bub_total = Bubble.count
         format.html {render "user_sessions/show"}
         format.js
       else

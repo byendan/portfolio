@@ -1,3 +1,6 @@
-$(".bubbles-view-area").html('<div class="bubble-box"><%= escape_javascript(render template: "bubbles/show", locals: {bubble: @bubble}) %>
-<%= escape_javascript(render template: "bubbles/edit_form", locals: {bubble: @bubble})%></div>
-');
+$(".bubbles-view-area").append("<div class='bubble-box'>" + "<%= escape_javascript(render template: 'bubbles/show', locals: {bubble: @bubble}) %>"
++ "<%= escape_javascript(render template: 'bubbles/edit_form', locals: {bubble: @bubble})%>" +"</div>"
+);
+if(<%= @bub_total %> > 2) {
+  $(".add-bub").css("display", "none");
+}

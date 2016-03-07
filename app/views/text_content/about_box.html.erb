@@ -1,6 +1,8 @@
 <div class="about-box">
   <div class="save-status">
-    <h3>Status: </h3><h3 id="about-save-status">Nothing to report</h3>
+      <h3>Status: </h3><h3 id="about-save-status">Nothing to report</h3>
+  </div>
+  <div class="about-form">
     <%= form_for(@about_text, url: text_content_url(id: @about_text.id), remote: true) do |f| %>
 
       <%= f.text_field :label, class: "form-control #{@about_text.parent}-#{@about_text.id}-title", :placeholder => @about_text.label %>

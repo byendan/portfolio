@@ -90,5 +90,48 @@
     h1 {
       text-align: left;
     }
+
+    .about-box {
+      display: inline-block;
+      width: 80%;
+      margin-top: 15px;
+      border: solid 2px #DDDDDD;
+      border-radius: 10px;
+      text-align: left;
+      font-family: "Roboto", sans-serif;
+
+      .save-status {
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+        padding: 15px;
+        padding-left: 25px;
+        h3 {
+          display: inline-block;
+          margin-right: 15px;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+
+      .about-form {
+        padding: 15px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+
+        label {
+          font-weight: 400;
+          font-size: 18px;
+        }
+        .form-control {
+          margin-bottom: 15px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+        }
+
+        #text_content_text {
+          height: 300px !important;
+        }
+      }
+    }
   }
 }

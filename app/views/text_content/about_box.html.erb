@@ -4,9 +4,10 @@
   </div>
   <div class="about-form">
     <%= form_for(@about_text, url: text_content_url(id: @about_text.id), remote: true) do |f| %>
-
+      <%= f.label "Title" %>
       <%= f.text_field :label, class: "form-control #{@about_text.parent}-#{@about_text.id}-title", :placeholder => @about_text.label %>
-      <%= f.text_field :text, class: "form-control #{@about_text.parent}-#{@about_text.id}", :placeholder => @about_text.text %>
+      <%= f.label "About Text" %>
+      <%= f.text_area :text, class: "form-control #{@about_text.parent}-#{@about_text.id}", :placeholder => @about_text.text %>
       <%= f.hidden_field :id  %>
       <%= f.hidden_field :parent %>
       <%= f.hidden_field :parent_class  %>

@@ -9,7 +9,7 @@
     <% end %>
 
   </div>
-  <% if @bub_count < 4 %>
+  <% if @bub_count < 3 %>
     <div class="add-bub">
         <%= button_to 'Add Bubble', bubbles_path, remote: true, class: "btn btn-primary bub-edit" %>
     </div>

@@ -8,6 +8,15 @@ class UserSessionsController < ApplicationController
   def show
     @bubbles = Bubble.all
     @bub_count = Bubble.count
+
+
+    unless @about_text = TextContent.find_by(parent: "about")
+      about_params = {label: "Name your new about title", text: "Enter your about section text",
+                      parent: "about", parent_class: ".about"}
+      @about_text = TextContent.new(about_params)
+      @about_text.save
+    end
+
   end
 
   def create

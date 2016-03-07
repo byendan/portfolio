@@ -1,0 +1,15 @@
+<div class="about-box">
+  <div class="save-status">
+    <h3>Status: </h3><h3 id="about-save-status">Nothing to report</h3>
+    <%= form_for(@about_text, url: text_content_url(id: @about_text.id), remote: true) do |f| %>
+
+      <%= f.text_field :label, class: "form-control #{@about_text.parent}-#{@about_text.id}-title", :placeholder => @about_text.label %>
+      <%= f.text_field :text, class: "form-control #{@about_text.parent}-#{@about_text.id}", :placeholder => @about_text.text %>
+      <%= f.hidden_field :id  %>
+      <%= f.hidden_field :parent %>
+      <%= f.hidden_field :parent_class  %>
+
+      <%= f.submit "Edit", class: "btn btn-primary bub-edit" %>
+    <% end %>
+  </div>
+</div>

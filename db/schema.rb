@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302070125) do
+ActiveRecord::Schema.define(version: 20160307193132) do
 
   create_table "bubbles", force: :cascade do |t|
     t.string   "text"
     t.integer  "bub_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "text_contents", force: :cascade do |t|
+    t.string   "text"
+    t.string   "label"
+    t.string   "parent"
+    t.string   "parent_class"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

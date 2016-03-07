@@ -1,0 +1,8 @@
+var name = ".<%= escape_javascript(@update_text.parent) %>-<%= @update_text.id %>";
+$(name).val("<%= escape_javascript(@update_text.text) %>");
+if ($(name + "-title").length) {
+    $(name + "-title").val("<%= escape_javascript(@update_text.label) %>");
+}
+
+$(".<%= escape_javascript(@update_text.parent)%>-box .save-status").css("background-color", "#82e3a6");
+$("#<%= escape_javascript(@update_text.parent)%>-save-status").text("Info has been saved");

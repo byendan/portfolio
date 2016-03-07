@@ -40,7 +40,9 @@ class BubblesController < ApplicationController
 
   end
 
-  def bubble_params
+  private
+
+    def bubble_params
       params.require(:bubble).permit(:text, :id)
     end
 end

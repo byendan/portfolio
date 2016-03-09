@@ -134,4 +134,28 @@
       }
     }
   }
+
+  .project-section {
+    background-color: #F7F7F9;
+    padding: 20px;
+    text-align: center;
+    color: #333333;
+
+    .project-form {
+      display: inline-block;
+      width: 60%;
+      border: solid 1px #DDDDDD;
+      border-radius: 10px;
+      padding: 20px;
+
+      .p-form {
+        display: inline-block;
+        width: 90%;
+
+        .p-field {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

@@ -7,6 +7,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def show
+    @project = Project.find(params[:id])
+  end
+
   def create
     @project = Project.new(project_params)
     respond_to do |format|

@@ -184,4 +184,19 @@
     display: inline-block;
 
   }
+
+  .mf-status-area {
+    width: 100%;
+    padding: 15px;
+
+    h3 {
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+    }
+
+    .mf-check {
+      color: #29B55C;
+    }
+  }
 }

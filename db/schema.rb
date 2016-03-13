@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309012544) do
+ActiveRecord::Schema.define(version: 20160313183145) do
 
   create_table "bubbles", force: :cascade do |t|
     t.string   "text"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20160309012544) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "taggings", ["project_id"], name: "index_taggins_on_project_id"
-  add_index "taggings", ["tag_id"], name: "index_taggins_on_tag_id"
+  add_index "taggings", ["project_id"], name: "index_taggings_on_project_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"

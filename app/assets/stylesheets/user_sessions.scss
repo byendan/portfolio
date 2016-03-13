@@ -134,4 +134,69 @@
       }
     }
   }
+
+  .project-section {
+    background-color: #F7F7F9;
+    padding: 20px;
+    text-align: center;
+    color: #333333;
+
+    .project-form {
+      display: inline-block;
+      width: 60%;
+      border: solid 1px #DDDDDD;
+      border-radius: 10px;
+      padding: 20px;
+
+      .p-form {
+        display: inline-block;
+        width: 90%;
+
+        .p-field {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.master-form {
+  width: 60%;
+  display: inline-block;
+  border: solid 1px #dddddd;
+  border-radius: 5px;
+  padding: 15px;
+
+  .form-link {
+    width: 100%;
+    padding: 15px;
+    font-family: "Roboto", sans-serif;
+    border: solid 1px #333333;
+    border-radius: 15px;
+    background-color: #dddddd;
+  }
+
+  .button_to {
+    display: inline-block;
+  }
+
+  .mf-btn {
+    display: inline-block;
+
+  }
+
+  .mf-status-area {
+    width: 100%;
+    padding: 15px;
+
+    h3 {
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+    }
+
+    .mf-check {
+      color: #29B55C;
+    }
+  }
 }

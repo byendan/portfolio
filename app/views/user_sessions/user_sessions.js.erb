@@ -1,0 +1,21 @@
+$(document).ready(function() {
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    alert("Js works a little");
+    if($(this).attr("href") == "#editP") {
+
+      $(this).tab('show');
+
+      $("#editP").append(<%= escape_javascript(render partial: 'projects/show_list') %>);
+
+    } else if ($(this).attr("id") == "editT") {
+      alert("Hey you clicked something");
+    }
+  });
+
+  $( ".form-link" ).on("click", function() {
+    var p_id_full = $(this).attr("id");
+    var p_id = p_id_full.split("-")[1];
+    $(".edit-list").empty();
+    alert("Yay something works");
+  });
+});

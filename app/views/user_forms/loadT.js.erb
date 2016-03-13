@@ -1,0 +1,2 @@
+$(".mf-area").empty();
+$(".mf-area").append("<%= escape_javascript(render partial: 'user_forms/load_t', locals: {tags: @tag_load}) %> ");

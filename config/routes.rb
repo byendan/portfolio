@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+
+  get 'projects/create'
+
   # get 'bubbles/new'
   # post 'bubbles/update'
   # patch 'bubbles/update'
@@ -7,6 +11,19 @@ Rails.application.routes.draw do
   resources :bubbles
   resources :user_sessions, only: [:create, :destroy]
   resources :text_content
+  resources :projects
+  resources :tags
+  resources :user_forms
+
+  post 'addP' => 'user_forms#addP'
+  post 'addT' => 'user_forms#addT'
+  post 'editP' => 'user_forms#editP'
+  post 'editT' => 'user_forms#editT'
+  post 'loadP' => 'user_forms#loadP'
+  post 'loadT' => 'user_forms#loadT'
+
+  get '/projects' => 'projects#index'
+  
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
   get '/sign_in', to: 'user_sessions#new', as: :sign_in

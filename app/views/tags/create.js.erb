@@ -1,0 +1,5 @@
+$(".status-link").empty();
+$(".mf-status").empty();
+$(".status-link").append('<%= escape_javascript(link_to("Preview #{@tag.name} in new tab", @tag, target: "_blank")) %>');
+$(".mf-status").text("Tag has been saved ");
+$(".mf-status").append("<i class='fa fa-check-circle-o mf-check'></i>")

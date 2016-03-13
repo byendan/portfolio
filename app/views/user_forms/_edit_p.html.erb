@@ -1,0 +1,7 @@
+<div class="edit-list">
+  <% @projects.each do |project| %>
+    <div class="form-link" id="<%= "project-#{project.id}"%>">
+      <h3><%= button_to "#{project.name}", loadP_path(id: project.id), remote: true %></h3>
+    </div>
+  <% end %>
+</div>

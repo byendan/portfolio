@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 20160309012544) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "taggins", force: :cascade do |t|
+  create_table "taggings", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "taggins", ["project_id"], name: "index_taggins_on_project_id"
-  add_index "taggins", ["tag_id"], name: "index_taggins_on_tag_id"
+  add_index "taggings", ["project_id"], name: "index_taggings_on_project_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"

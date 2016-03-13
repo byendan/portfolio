@@ -1,0 +1,7 @@
+<div class="edit-list">
+  <% @tags.each do |tag| %>
+    <div class="form-link" id="<%= "tag-#{tag.id}"%>">
+      <h3><%= button_to "#{tag.name}", loadT_path(id: tag.id), remote: true %></h3>
+    </div>
+  <% end %>
+</div>

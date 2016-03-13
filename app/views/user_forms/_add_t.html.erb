@@ -1,0 +1,9 @@
+<div class="project-form">
+  <%= form_for(Tag.new, remote: true) do |f| %>
+      <%= f.text_field :name, placeholder: "Tag name", class: "form-control" %>
+      <%= f.text_area :content, placeholder: "Tag Description", rows: 15, class: "form-control" %>
+    <div class="project-button">
+      <%= f.submit "Post", class: "btn btn-primary "%>
+    </div>
+  <% end %>
+</div>

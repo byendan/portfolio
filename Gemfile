@@ -8,6 +8,9 @@ gem 'rails', '4.2.2'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.5.0'
+
+gem 'carrierwave'
+gem 'remotipart', '~> 1.2', '>= 1.2.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

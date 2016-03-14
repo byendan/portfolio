@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160313183145) do
+ActiveRecord::Schema.define(version: 20160314074040) do
 
   create_table "bubbles", force: :cascade do |t|
     t.string   "text"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160313183145) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160313183145) do
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
   end
 
   create_table "text_contents", force: :cascade do |t|

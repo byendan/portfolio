@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :create
   def index
     if params[:tag]
       @projects = Project.tagged_with(params[:tag])
@@ -15,7 +16,8 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     respond_to do |format|
       if @project.save
-        format.js
+        format.js { render "create"}
+
       else
         format.html {render user_sessions_path}
       end
@@ -26,7 +28,7 @@ class ProjectsController < ApplicationController
     @update_project = Project.find(params[:id])
     respond_to do |format|
       if @update_project.update_attributes(project_params)
-        format.js
+        format.js {render "update"}
       else
         format.html {render user_sessions_path}
       end
@@ -35,6 +37,6 @@ class ProjectsController < ApplicationController
 
   private
     def project_params
-      params.require(:project).permit(:name, :content, :all_tags)
+      params.require(:project).permit(:name, :content, :all_tags, :image)
     end
 end

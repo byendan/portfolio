@@ -1,7 +1,8 @@
 <div class="project-form">
-  <%= form_for(Project.new, remote: true) do |f| %>
+  <%= form_for(Project.new, remote: true, html: { multipart: true }) do |f| %>
       <%= f.text_field :name, placeholder: "Project name", class: "form-control" %>
       <%= f.text_area :content, placeholder: "Project Description", rows: 15, class: "form-control" %>
+      <%= f.file_field :image %>
     <div class="project-button">
       <%= f.submit "Post", class: "btn btn-primary "%>
     </div>

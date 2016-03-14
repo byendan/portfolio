@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :bubbles
   resources :user_sessions, only: [:create, :destroy]
+  resources :users, only: [:create, :destroy]
   resources :text_content
   resources :projects
   resources :tags
@@ -23,10 +24,11 @@ Rails.application.routes.draw do
   post 'loadT' => 'user_forms#loadT'
 
   get '/projects' => 'projects#index'
-  
+
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
   get '/sign_in', to: 'user_sessions#new', as: :sign_in
+  get '/sign_up', to: 'users#new', as: :sign_up
   get '/dashboard' => 'user_sessions#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

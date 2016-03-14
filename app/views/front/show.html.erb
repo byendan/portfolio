@@ -24,6 +24,16 @@
     </div>
 </div>
 
+<div class="tags-box">
+    <h1>Categories</h1>
+    <%= render @tags %>
+</div>
+
+<div class="prog-box">
+  <h1>Projects</h1>
+  <%= render @projects %>
+</div>
+
 <div class="footer">
   <% if current_user %>
     <div class="btn btn-primary btn-lg logout-button"><%= link_to "Logout", sign_out_path, method: "delete" %></div>

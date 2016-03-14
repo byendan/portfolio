@@ -250,13 +250,22 @@
       font-weight: 300;
       padding-left: 10px;
     }
+
+    .links {
+      position: absolute;
+      bottom: 10px;
+
+      a {
+        display: block;
+      }
+    }
   }
 }
 
 .tags-box, .prog-box {
   background-color: #333333;
   padding-left: 20px;
-  color: white;
+  color: #dddddd;
   margin: 0;
   padding-top: 50px;
 

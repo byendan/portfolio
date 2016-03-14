@@ -5,6 +5,8 @@
       <%= f.file_field :image %>
       <h3>Current image</h3>
       <%= image_tag(@project_load.image, size: "100x100") %>
+      <%= f.text_field :github, placeholder: "#{@project_load.github}", class: "form-control" %>
+      <%= f.text_field :site, placeholder: "#{@project_load.site}", class: "form-control" %>
     <div class="project-button">
       <%= f.submit "Post", class: "btn btn-primary "%>
     </div>

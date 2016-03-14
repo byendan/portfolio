@@ -3,6 +3,8 @@
       <%= f.text_field :name, placeholder: "Project name", class: "form-control" %>
       <%= f.text_area :content, placeholder: "Project Description", rows: 15, class: "form-control" %>
       <%= f.file_field :image %>
+      <%= f.text_field :github, placeholder: "Github url", class: "form-control" %>
+      <%= f.text_field :site, placeholder: "Site url", class: "form-control" %>
     <div class="project-button">
       <%= f.submit "Post", class: "btn btn-primary "%>
     </div>

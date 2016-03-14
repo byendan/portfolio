@@ -54,5 +54,14 @@
       font-weight: 300;
       padding-left: 10px;
     }
+
+    .links {
+      position: absolute;
+      bottom: 10px;
+
+      a {
+        display: block;
+      }
+    }
   }
 }

@@ -209,6 +209,7 @@
   margin-top: 15px;
   background-color: white;
   height: 200px;
+  position: relative;
 
   .p-box {
     display: inline-block;
@@ -233,10 +234,14 @@
   .right-p-box {
     width: 75%;
     text-align: center;
-    position: relative;
-    top: -110px;
+    position: absolute;
+    top: 10px;
     font-family: "Roboto", sans-serif;
     color: #333333;
+
+    h2, h3 {
+
+    }
 
     h2 {
       margin-top: 5px;

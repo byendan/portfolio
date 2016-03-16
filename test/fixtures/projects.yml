@@ -1,9 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+
 one:
   name: MyString
   content: MyText
+  image: image.png
+  github: github.com
+  site: example.com
 
 two:
   name: MyString
   content: MyText
+  image: image.png
+  github: github.com
+  site: example.com
+
+valid_site:
+  name: validProject
+  content: validContent
+  image: blank
+  github: https://github.com/
+  site: https://validSite.com/

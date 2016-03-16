@@ -4,6 +4,23 @@ class Project < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  validates :name, presence: true
+  validates :content, presence: true
+  validates :image, presence: true
+  validates :github, presence: true
+  validates :site, presence: true
+  validate :valid_addresses
+
+  private
+
+    def valid_addresses
+      [github, site].each do |address|
+        errors.add(:base, "#{address} has invalid transfer protocol") unless /http|https/.match(address)
+        errors.add(:base, "#{address} has invalid top level domain") unless /.(com|net|gov|io|co|biz)/.match(address)
+
+      end
+    end
+
   def all_tags=(names)
     self.tags = names.split(",").map do |name|
         Tag.where(name: name.strip).first_or_create!

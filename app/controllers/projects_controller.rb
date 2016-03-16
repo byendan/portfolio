@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.save
         format.js { render "create"}
-
+        
       else
         format.html {render user_sessions_path}
       end

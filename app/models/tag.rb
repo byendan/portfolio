@@ -4,4 +4,8 @@ class Tag < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  validates :name, presence: true
+  validates :content, presence: true
+  validates :image, presence: true
+
 end

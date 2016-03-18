@@ -16,3 +16,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore images from local testing
+/public/images/*

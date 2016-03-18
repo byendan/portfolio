@@ -33,6 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use authlogic for users and sessions
 gem 'authlogic', '3.4.6'
 
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -46,7 +47,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0' 
+  gem 'web-console', '~> 2.0'
 end
 
 

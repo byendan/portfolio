@@ -9,6 +9,7 @@ class UserSessionsController < ApplicationController
     @bubbles = Bubble.all
     @bub_count = Bubble.count
 
+    # Will create a default about text object on first login
     unless @about_text = TextContent.find_by(parent: "about")
       about_params = {label: "Name your new about title", text: "Enter your about section text",
                       parent: "about", parent_class: ".about"}
@@ -17,7 +18,7 @@ class UserSessionsController < ApplicationController
     end
 
     @tags = Tag.all
-    @projects = Project.all 
+    @projects = Project.all
 
   end
 

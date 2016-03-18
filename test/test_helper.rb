@@ -6,10 +6,13 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
+
+
   def add_image(p)
     File.open('test/img/test.png') do |f|
       p.image = f
     end
   end
+
 
 end

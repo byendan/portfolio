@@ -6,6 +6,7 @@ class BubblesController < ApplicationController
   end
 
   def create
+    # Because no form is involved a default bubble gets created
     @bubble = Bubble.new
     @bubble.text = "Edit this bubble"
     respond_to do |format|

@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use authlogic for users and sessions
 gem 'authlogic', '3.4.6'
 
+gem 'figaro'
+gem 'fog'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

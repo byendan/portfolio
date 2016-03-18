@@ -19,3 +19,6 @@
 
 # Ignore images from local testing
 /public/images/*
+
+# Ignore application configuration
+/config/application.yml

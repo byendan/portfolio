@@ -1,7 +1,8 @@
 CarrierWave.configure do |config|
 
   config.storage = :fog
-  
+  config.root = Rails.root.join('tmp') # adding these...
+  config.cache_dir = 'carrierwave' # ...two lines
   config.fog_credentials = {
     :provider               => 'Rackspace',
     :rackspace_username     => ENV['RACKSPACE_USERNAME'],

@@ -34,7 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'authlogic', '3.4.6'
 
 gem 'figaro'
-gem 'fog'
+gem 'fog', '~> 1.37'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

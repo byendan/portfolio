@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
     def valid_addresses
       [github, site].each do |address|
         errors.add(:base, "#{address} has invalid transfer protocol") unless /http|https/.match(address)
-        errors.add(:base, "#{address} has invalid top level domain") unless /.(com|net|gov|io|co|biz)/.match(address)
+        errors.add(:base, "#{address} has invalid top level domain") unless /.(com|net|gov|io|co|biz|org)/.match(address)
 
       end
     end

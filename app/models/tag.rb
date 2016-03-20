@@ -4,6 +4,8 @@ class Tag < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  default_scope -> { order(created_at: :asc) }
+
   validates :name, presence: true
   validates :content, presence: true
   validates :image, presence: true

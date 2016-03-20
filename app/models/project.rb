@@ -4,6 +4,8 @@ class Project < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  default_scope -> { order(created_at: :asc) }
+
   validates :name, presence: true
   validates :content, presence: true
   validates :image, presence: true
@@ -21,7 +23,7 @@ class Project < ActiveRecord::Base
       end
     end
 
-    # For future use when tagging system is implemented 
+    # For future use when tagging system is implemented
   def all_tags=(names)
     self.tags = names.split(",").map do |name|
         Tag.where(name: name.strip).first_or_create!

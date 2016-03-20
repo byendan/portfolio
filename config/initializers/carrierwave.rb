@@ -1,6 +1,6 @@
 CarrierWave.configure do |config|
 
-  
+
   config.root = Rails.root.join('tmp') # adding these...
   config.cache_dir = 'carrierwave' # ...two lines
   config.fog_credentials = {
@@ -12,6 +12,8 @@ CarrierWave.configure do |config|
     :persistent => false
   }
   config.fog_directory = 'portfolio'
-
+  config.ignore_integrity_errors = false
+  config.ignore_processing_errors = false
+  config.ignore_download_errors = false
 
 end

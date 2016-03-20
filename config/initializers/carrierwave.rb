@@ -1,6 +1,6 @@
 CarrierWave.configure do |config|
 
-  config.storage = :fog
+  
   config.root = Rails.root.join('tmp') # adding these...
   config.cache_dir = 'carrierwave' # ...two lines
   config.fog_credentials = {
@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     :persistent => false
   }
   config.fog_directory = 'portfolio'
-  config.fog_public = true
+
 
 end

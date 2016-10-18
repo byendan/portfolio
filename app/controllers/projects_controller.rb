@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     respond_to do |format|
-      if @project.save
+      if @project.save!
         format.js { render "create"}
 
       else

@@ -11,7 +11,7 @@
       <%= f.submit "Post", class: "btn btn-primary "%>
     </div>
     <div class="delete-project">
-      <%= button_to "delete", @project_load, :method => :delete %>
+      <%= button_to "delete", @project_load, :method => :delete, remote: true %>
     </div>
   <% end %>
 </div>

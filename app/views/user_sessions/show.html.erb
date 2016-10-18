@@ -1,19 +1,6 @@
 <div class="user-area">
   <h1>User Info</h1>
-  <div class="bubbles-view-area">
-    <% @bubbles.each do |bubble| %>
-      <div class="bubble-box">
-        <%= render template: "bubbles/show", locals: {bubble: bubble} %>
-        <%= render template: "bubbles/edit_form", locals: {bubble: bubble} %>
-      </div>
-    <% end %>
 
-  </div>
-  <% if @bub_count < 3 %>
-    <div class="add-bub">
-        <%= button_to 'Add Bubble', bubbles_path, remote: true, class: "btn btn-primary bub-edit" %>
-    </div>
-  <% end %>
 
   <div class="text-content-1">
       <h1>About Section</h1>

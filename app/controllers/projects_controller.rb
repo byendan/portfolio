@@ -28,9 +28,9 @@ class ProjectsController < ApplicationController
     @update_project = Project.find(params[:id])
     respond_to do |format|
       if @update_project.update_attributes(project_params)
-        format.js {render "update"}
+        format.js {redirect_to user_sessions_path}
       else
-        format.html {render user_sessions_path}
+        format.html {redirect_to user_sessions_path}
       end
     end
   end

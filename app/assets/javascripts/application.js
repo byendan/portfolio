@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require jquery.remotipart
 //= require turbolinks
+//= require materialize-sprockets
 //= require_tree .

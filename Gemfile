@@ -36,6 +36,9 @@ gem 'authlogic', '3.4.6'
 gem 'figaro'
 gem 'fog', '~> 1.37'
 
+# Materialize framework
+gem 'materialize-sass'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

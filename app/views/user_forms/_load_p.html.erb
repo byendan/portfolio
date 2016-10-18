@@ -10,5 +10,8 @@
     <div class="project-button">
       <%= f.submit "Post", class: "btn btn-primary "%>
     </div>
+    <div class="delete-project">
+      <%= button_to "delete", @project_load, :method => :delete %>
+    </div>
   <% end %>
 </div>

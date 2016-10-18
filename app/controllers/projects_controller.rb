@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.save
         format.js { render "create"}
-        
+
       else
         format.html {render user_sessions_path}
       end
@@ -33,6 +33,16 @@ class ProjectsController < ApplicationController
         format.html {render user_sessions_path}
       end
     end
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.delete
+    respond_to do |format|
+      format.js {render "update"}
+      format.html {render "index"}
+    end
+
   end
 
   private
